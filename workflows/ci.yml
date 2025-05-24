@@ -1,0 +1,21 @@
+name: My First CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Run a Hello World Script
+      run: echo "🚀 Hello, DevOps world! Your CI pipeline is working!"
+
